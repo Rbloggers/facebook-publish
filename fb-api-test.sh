@@ -19,7 +19,7 @@ rawurlencode() {
 
 
 ## Variables
-message='From travis\u000A#R #R部落客'
+message="From travis\n#R #R部落客"
 link='https://liao961120.github.io/2018/09/09/linguistics-down.html'
 
 
