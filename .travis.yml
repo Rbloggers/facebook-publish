@@ -3,7 +3,8 @@ sudo: required
 dist: trusty
 
 script:
-  - bash fb-api-test.sh
+  - bash get_info.sh
+  - bash publish.sh
 
 # deploy
 #deploy:

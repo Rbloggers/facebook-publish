@@ -15,8 +15,8 @@ function urlencode() {
 title='部落客 English'
 tags='#R #R部落'
 link='https://liao961120.github.io/2018/09/09/linguistics-down.html'
-
-date=$(echo $(date --date="+1 minutes" +%s))
+min=11
+date=$(echo $(date --date="+11 minutes" +%s))
 
 ## Post on Facebook
 curl -i -X POST \

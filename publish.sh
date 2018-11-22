@@ -14,20 +14,17 @@ function urlencode() {
 
 
 ## Post on Facebook
-min=11
+
+min=20  # First post scheduled in $min minutes
+
 while IFS=$'\t' read -r title tags link
 do
-    printf "$min\n"
-    printf "$title\n"
-    printf "$tags\n"
-    printf "$link\n\n"
-    
-    unixtime=$(echo $(date --date="+${min} minutes" +%s))
+    date=$(echo $(date --date="+${min} minutes" +%s))
 
     curl -i -X POST \
-     "https://graph.facebook.com/v3.2/twRblogger/feed?message=$( urlencode "${title}" )%0A$( urlencode "${tags}" )&link=$( urlencode "${link}" )&access_token=$( urlencode "${fbtoken}" )"
-  
-    min=$((${min} + 1))
-    sleep 1
+     "https://graph.facebook.com/v3.2/twRblogger/feed?published=false&message=$( urlencode "${title}" )%0A$( urlencode "${tags}" )&link=$( urlencode "${link}" )&access_token=$( urlencode "${fbtoken}" )&scheduled_publish_time=${date}"
+
+    min=$((${min} + 5))
+    sleep 0.5
 done < <(paste FB_title.txt FB_tags.txt FB_link.txt)
 
