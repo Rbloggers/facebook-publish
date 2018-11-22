@@ -19,9 +19,8 @@ min=30  # First post scheduled in $min minutes
 
 while IFS=$'\t' read -r title tags link
 do
-    if [[ $tags == "#" ]]; then
-        tags=""
-    fi
+    # Deal with empty tags
+    if [[ $tags == "#" ]]; then tags=""; fi  
     
     date=$(echo $(date --date="+${min} minutes" +%s))
 
