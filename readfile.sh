@@ -1,5 +1,6 @@
 #!/bin/bash
 
+## Encode URL
 function urlencode() {
     local length="${#1}"
     for (( i = 0; i < length; i++ )); do
@@ -11,7 +12,8 @@ function urlencode() {
     done
 }
 
-fbtoken="fbtoken"
+
+## Post on Facebook
 min=0
 while IFS=$'\t' read -r title tags link
 do
@@ -20,7 +22,6 @@ do
     printf "$tags\n"
     printf "$link\n\n"
 
-    ## Post on Facebook
     curl -i -X POST \
      "https://graph.facebook.com/v3.2/twRblogger/feed?message=$( urlencode "${title}" )%0A$( urlencode "${tags}" )&link=$( urlencode "${link}" )&access_token=$( urlencode "${fbtoken}" )"
   
