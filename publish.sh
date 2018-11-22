@@ -13,8 +13,11 @@ function urlencode() {
 }
 
 
-## Post on Facebook
+## Check existance of new post
+[ -s FB_title.txt ] || printf "No new post.\nNo curl request sent.\n" && exit 0
 
+
+## Post on Facebook
 min=30  # First post scheduled in $min minutes
 
 while IFS=$'\t' read -r title tags link

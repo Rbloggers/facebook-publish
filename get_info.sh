@@ -1,8 +1,8 @@
 #!/bin/bash
 
-curl https://raw.githubusercontent.com/Rbloggers/web/posts/FB_title.txt > FB_title.txt
-curl https://raw.githubusercontent.com/Rbloggers/web/posts/FB_link.txt > FB_link.txt
-curl https://raw.githubusercontent.com/Rbloggers/web/posts/FB_tags.txt > FB_tags.txt
+curl --silent --show-error --fail https://raw.githubusercontent.com/Rbloggers/web/posts/FB_title.txt > FB_title.txt
+curl --silent --show-error --fail https://raw.githubusercontent.com/Rbloggers/web/posts/FB_link.txt > FB_link.txt
+curl --silent --show-error --fail https://raw.githubusercontent.com/Rbloggers/web/posts/FB_tags.txt > FB_tags.txt
 
 
 sed "s/\(,\)$//" FB_tags.txt > temp   # remove trailing comma
