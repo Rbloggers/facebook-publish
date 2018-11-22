@@ -12,17 +12,17 @@ function urlencode() {
 
 
 ## Variables
-message='部落客 English'
-tag='#R #R 部落'
+title='部落客 English'
+tags='#R #R部落'
 link='https://liao961120.github.io/2018/09/09/linguistics-down.html'
-
+min=0
 
 ## Post on Facebook
 curl -i -X POST \
- "https://graph.facebook.com/v3.2/twRblogger/feed?message=$( urlencode "${message}" )%0A$( urlencode "${tag}" )&link=$( urlencode "${link}" )&access_token=$( urlencode "${fbtoken}" )"
+ "https://graph.facebook.com/v3.2/twRblogger/feed?published=false&message=$( urlencode "${title}" )%0A$( urlencode "${tags}" )&link=$( urlencode "${link}" )&access_token=$( urlencode "${fbtoken}" )&scheduled_publish_time=+"${min}" minutes"
  
  
-# ?published=false&message=$( rawurlencode "$message" )&scheduled_publish_time=+"${min}" minutes
+# ?published=false&message=$( rawurlencode "$title" )&scheduled_publish_time=+"${min}" minutes
  
 #https://developers.facebook.com/docs/pages/publishing?locale=zh_TW
  
