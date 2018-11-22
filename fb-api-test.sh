@@ -1,20 +1,13 @@
 ## Encode URL
-rawurlencode() {
-  local string="${1}"
-  local strlen=${#string}
-  local encoded=""
-  local pos c o
-
-  for (( pos=0 ; pos<strlen ; pos++ )); do
-     c=${string:$pos:1}
-     case "$c" in
-        [-_.~a-zA-Z0-9] ) o="${c}" ;;
-        * )               printf -v o '%%%02x' "'$c"
-     esac
-     encoded+="${o}"
-  done
-  echo "${encoded}"    # You can either set a return variable (FASTER) 
-  REPLY="${encoded}"   #+or echo the result (EASIER)... or both... :p
+function urlencode() {
+    local length="${#1}"
+    for (( i = 0; i < length; i++ )); do
+        local c="${1:i:1}"
+        case $c in
+            [a-zA-Z0-9.~_-]) printf "$c" ;;
+            *) printf "$c" | xxd -p -c1 | while read x;do printf "%%%s" "$x";done
+        esac
+    done
 }
 
 
@@ -25,7 +18,7 @@ link='https://liao961120.github.io/2018/09/09/linguistics-down.html'
 
 ## Post on Facebook
 curl -i -X POST \
- "https://graph.facebook.com/v3.2/twRblogger/feed?message=$( rawurlencode "$message" )%0A#R&link=$( rawurlencode "$link" )&access_token=$( rawurlencode "$fbtoken" )"
+ "https://graph.facebook.com/v3.2/twRblogger/feed?message=$( urlencode "$message" )&link=$( urlencode "$link" )&access_token=$( urlencode "$fbtoken" )"
  
  
 # ?published=false&message=$( rawurlencode "$message" )&scheduled_publish_time=+"${min}" minutes
