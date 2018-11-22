@@ -12,14 +12,14 @@ function urlencode() {
 
 
 ## Variables
-message='部落客'
+message='部落客 English'
 tag='#R #R部落'
 link='https://liao961120.github.io/2018/09/09/linguistics-down.html'
 
 
 ## Post on Facebook
 curl -i -X POST \
- "https://graph.facebook.com/v3.2/twRblogger/feed?message=$( urlencode ${message} )%0A$( urlencode ${tag} )&link=$( urlencode $link )&access_token=$( urlencode $fbtoken )"
+ "https://graph.facebook.com/v3.2/twRblogger/feed?message=$( urlencode "${message}" )%0A$( urlencode "${tag}" )&link=$( urlencode "${link}" )&access_token=$( urlencode "${fbtoken}" )"
  
  
 # ?published=false&message=$( rawurlencode "$message" )&scheduled_publish_time=+"${min}" minutes
