@@ -13,7 +13,7 @@ function urlencode() {
 
 ## Variables
 message='部落客 English'
-tag='#R #R部落'
+tag='#R #R 部落'
 link='https://liao961120.github.io/2018/09/09/linguistics-down.html'
 
 
