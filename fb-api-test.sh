@@ -15,7 +15,7 @@ function urlencode() {
 title='部落客 English'
 tags='#R #R部落'
 link='https://liao961120.github.io/2018/09/09/linguistics-down.html'
-min=1
+min=11
 
 ## Post on Facebook
 curl -i -X POST \
