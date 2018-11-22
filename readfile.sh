@@ -14,7 +14,7 @@ function urlencode() {
 
 
 ## Post on Facebook
-min=0
+min=1
 while IFS=$'\t' read -r title tags link
 do
     printf "$min\n"
