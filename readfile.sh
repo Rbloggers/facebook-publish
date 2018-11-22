@@ -21,6 +21,8 @@ do
     printf "$title\n"
     printf "$tags\n"
     printf "$link\n\n"
+    
+    unixtime=$(echo $(date --date="+${min} minutes" +%s))
 
     curl -i -X POST \
      "https://graph.facebook.com/v3.2/twRblogger/feed?message=$( urlencode "${title}" )%0A$( urlencode "${tags}" )&link=$( urlencode "${link}" )&access_token=$( urlencode "${fbtoken}" )"
