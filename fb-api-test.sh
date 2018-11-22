@@ -19,7 +19,7 @@ rawurlencode() {
 
 
 ## Variables
-message='From travis'
+message='From travis\u000A#R #R部落客'
 link='https://liao961120.github.io/2018/09/09/linguistics-down.html'
 
 
@@ -28,6 +28,7 @@ curl -i -X POST \
  "https://graph.facebook.com/v3.2/twRblogger/feed?message=$( rawurlencode "$message" )&link=$( rawurlencode "$link" )&access_token=$( rawurlencode "$fbtoken" )"
  
  
+# ?published=false&message=$( rawurlencode "$message" )&scheduled_publish_time=+"${min}" minutes
  
- 
+#https://developers.facebook.com/docs/pages/publishing?locale=zh_TW
  
