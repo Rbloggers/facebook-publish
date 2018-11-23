@@ -4,8 +4,7 @@ dist: trusty
 
 script:
   - sudo bash get_info.sh
-  - sudo bash check_url.sh
-  - sudo bash publish.sh
+  - bash check_url.sh && bash publish.sh
 
 # deploy
 #deploy:
