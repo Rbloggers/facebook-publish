@@ -13,10 +13,6 @@ function urlencode() {
 }
 
 
-## Check existance of new post
-[ -s FB_title.txt ] || printf "No new post.\nNo curl request sent.\n" && exit 0
-
-
 ## Post on Facebook
 min=30  # First post scheduled in $min minutes
 
@@ -26,7 +22,8 @@ do
     if [[ $tags == "#" ]]; then tags=""; fi  
     
     date=$(echo $(date --date="+${min} minutes" +%s))
-
+    printf "$date\n"
+    
     curl -i -X POST \
      "https://graph.facebook.com/v3.2/twRblogger/feed?published=false&message=$( urlencode "${title}" )%0A$( urlencode "${tags}" )&link=$( urlencode "${link}" )&access_token=$( urlencode "${fbtoken}" )&scheduled_publish_time=${date}"
 
