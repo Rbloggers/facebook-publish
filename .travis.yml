@@ -3,8 +3,9 @@ sudo: required
 dist: trusty
 
 script:
-  - sudo bash get_info.sh
-  - bash check_url.sh && bash publish.sh
+  - bash get_info.sh
+  - bash check_url.sh
+  - bash publish.sh
 
 # deploy
 #deploy:

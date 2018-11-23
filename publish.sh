@@ -13,6 +13,13 @@ function urlencode() {
 }
 
 
+## Check existance of new post
+if [ ! -s FB_title.txt ]; then
+    printf "No new post.\nNo curl request sent.\n"
+    exit 0
+fi
+
+
 ## Post on Facebook
 min=30  # First post scheduled in $min minutes
 postperday=5
