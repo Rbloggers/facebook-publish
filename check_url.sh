@@ -15,4 +15,4 @@ while read url; do
 done < FB_link.txt
 
 [[ ${error} == "1" ]] && printf "${RED}TERMINATE 404\n" && exit 404
-printf "\nAll URLs Exist\nExit 0\n"
+printf "\n${RED}All URLs Exist\n${NC}Exit 0\n"
