@@ -32,9 +32,7 @@ do
 
     printf "\nPost: ${num}\n"
     # Push publish date furthur if too many posts
-    if [[ ${num} -gt ${postperday} ]]; then
-        day=$((${num} - ${postperday}))
-    fi
+    if [[ ${num} -gt ${postperday} ]]; then day=1; fi
     
     min=$((${min} + 8 + 1440 * ${day}))
     sleep 0.3
