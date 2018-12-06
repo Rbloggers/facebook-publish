@@ -28,33 +28,24 @@ cross_day=2
 while IFS=$'\t' read -r title tags link
 do
     num=$((${num} + 1))
-    
-    # Deal with empty tags
-    if [[ $tags == "#" ]]; then tags=""; fi  
-    
-    
-    ## Check publish history on FB
-    if grep -Fxq "${link}" history/hist_link.txt; then
-        echo "${link} already published on FB."
-        exit 1000
-    else
-        ## Record publish history
-        echo "${title}" >> history/hist_title.txt
-        echo "${tags}" >> history/hist_tags.txt
-        echo "${link}" >> history/hist_link.txt
-    fi
-    
+
     
     ## Publish posts
     date=$(echo $(date --date="+${min} minutes" +%s))
-    
+    if [[ $tags == "#" ]]; then tags=""; fi  
+
     curl -i -X POST \
      "https://graph.facebook.com/v3.2/twRblogger/feed?published=false&message=$( urlencode "${title}" )%0A$( urlencode "${tags}" )&link=$( urlencode "${link}" )&access_token=$( urlencode "${fbtoken}" )&scheduled_publish_time=${date}"
-    
-    
 
+ 
+    ## Record publish history
+    echo "${title}" >> history/hist_title.txt
+    echo "${tags}" >> history/hist_tags.txt
+    echo "${link}" >> history/hist_link.txt   
+
+
+    ## Push publish date furthur if too many posts
     printf "\nPost: ${num}\n"
-    # Push publish date furthur if too many posts
     if [[ ${num} -gt ${postperday} ]]; then 
         min=$((${min} + 1440 * ${cross_day}))
     else
