@@ -5,6 +5,8 @@ dist: trusty
 script:
   - bash get_info.sh
   - bash check_url.sh
+
+after_success:
   - bash publish.sh
 
 # deploy

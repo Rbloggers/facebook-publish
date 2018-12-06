@@ -21,10 +21,10 @@ fi
 
 
 ## Post on Facebook
-min=30  # First post scheduled in $min minutes
+min=60  # First post scheduled in $min minutes
 postperday=3
 num=0
-day=0
+cross_day=2
 while IFS=$'\t' read -r title tags link
 do
     num=$((${num} + 1))
@@ -45,8 +45,11 @@ do
 
     printf "\nPost: ${num}\n"
     # Push publish date furthur if too many posts
-    if [[ ${num} -gt ${postperday} ]]; then day=2; fi
+    if [[ ${num} -gt ${postperday} ]]; then 
+        min=$((${min} + 1440 * ${cross_day}))
+    else
+        min=$((${min} + 8))
+    fi
     
-    min=$((${min} + 8 + 1440 * ${day}))
     sleep 0.3
 done < <(paste FB_title.txt FB_tags.txt FB_link.txt)
