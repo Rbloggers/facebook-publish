@@ -26,7 +26,7 @@ done < FB_link.txt
 while read url; do
     ## Check publish history on FB
     if grep -Fxq "${url}" history/hist_link.txt; then
-        echo "${RED}${url} ${NC}already published on FB."
+        printf "${RED}${url} ${NC}already published on FB.\n"
         err=1
     fi
 done < FB_link.txt
