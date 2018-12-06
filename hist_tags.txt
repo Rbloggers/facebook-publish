@@ -1,0 +1,40 @@
+#data_input #data_process #packages #plot #read #SQL #tutorials
+#operators #symbols #tutorials
+#finance #packages #quantmod
+#data_process #lapply #web
+#lapply #operators
+#animation #gif #tutorials #visualization
+#apply #data_process #matrix
+#conference #training #tutorials #workshop
+#data_process #ggplot2 #packages #scrapping #visualization
+#plot #tutorials #visualization
+#programming #shiny #visualization #web
+#apply #lapply #rstudio #source #tutorials
+#training #tutorials #workshop
+#rstudio #tutorials
+#data_mining #data.frame #openair_package #R-GUI #R-IDE #training #tutorials
+#ai #conference #data_input #packages #rstudio #training #tutorials #workshop
+#graphics #packages
+#legend #lines #plot #points
+
+#graphics #legend #packages #plot #tutorials #visualization
+#graphics #packages
+#data_input #read #tutorials
+#debug #shiny
+#by #cbind #data.frame #rbind #scale
+#Monte_Carlo #pi #plot #plotrix #programming #simulation
+
+#Hadoop #效能
+#Hadoop
+
+#效能
+
+
+#Hadoop #效能
+#Linux
+
+#Hadoop
+
+#Text_Mining
+#Text_Mining #bash
+#Course #experience
