@@ -22,7 +22,7 @@ fi
 
 ## Post on Facebook
 min=30  # First post scheduled in $min minutes
-postperday=5
+postperday=3
 num=0
 day=0
 while IFS=$'\t' read -r title tags link
@@ -36,12 +36,17 @@ do
     
     curl -i -X POST \
      "https://graph.facebook.com/v3.2/twRblogger/feed?published=false&message=$( urlencode "${title}" )%0A$( urlencode "${tags}" )&link=$( urlencode "${link}" )&access_token=$( urlencode "${fbtoken}" )&scheduled_publish_time=${date}"
+    
+    ## Record publish history
+    echo "${title}" >> history/hist_title.txt
+    echo "${tags}" >> history/hist_tags.txt
+    echo "${link}" >> history/hist_link.txt
+    
 
     printf "\nPost: ${num}\n"
     # Push publish date furthur if too many posts
-    if [[ ${num} -gt ${postperday} ]]; then day=1; fi
+    if [[ ${num} -gt ${postperday} ]]; then day=2; fi
     
     min=$((${min} + 8 + 1440 * ${day}))
     sleep 0.3
 done < <(paste FB_title.txt FB_tags.txt FB_link.txt)
-
