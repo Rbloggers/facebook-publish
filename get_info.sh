@@ -16,9 +16,9 @@ rm -r temp*
 ## History of Publication on FB
 [[ -d history ]] || mkdir history
 
-curl --silent --show-error --fail https://raw.githubusercontent.com/Rbloggers/facebook-publish/history/hist_title.txt > history/hist_title.txt
-curl --silent --show-error --fail https://raw.githubusercontent.com/Rbloggers/facebook-publish/history/hist_tags.txt > history/hist_tags.txt
-curl --silent --show-error --fail https://raw.githubusercontent.com/Rbloggers/facebook-publish/history/hist_link.txt > history/hist_link.txt
+#curl --silent --show-error --fail https://raw.githubusercontent.com/Rbloggers/facebook-publish/history/hist_title.txt > history/hist_title.txt
+#curl --silent --show-error --fail https://raw.githubusercontent.com/Rbloggers/facebook-publish/history/hist_tags.txt > history/hist_tags.txt
+#curl --silent --show-error --fail https://raw.githubusercontent.com/Rbloggers/facebook-publish/history/hist_link.txt > history/hist_link.txt
 
 ### INTERRUPT: Empty history
 #> history/hist_title.txt
