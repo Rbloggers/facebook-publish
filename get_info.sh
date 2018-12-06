@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ## New Posts to Publish on FB
+echo "Getting New Posts ..."
 curl --silent --show-error --fail https://raw.githubusercontent.com/Rbloggers/Rbloggers.github.io/posts/FB_title.txt > FB_title.txt
 curl --silent --show-error --fail https://raw.githubusercontent.com/Rbloggers/Rbloggers.github.io/posts/FB_link.txt > FB_link.txt
 curl --silent --show-error --fail https://raw.githubusercontent.com/Rbloggers/Rbloggers.github.io/posts/FB_tags.txt > FB_tags.txt
@@ -16,9 +17,10 @@ rm -r temp*
 ## History of Publication on FB
 [[ -d history ]] || mkdir history
 
-#curl --silent --show-error --fail https://raw.githubusercontent.com/Rbloggers/facebook-publish/history/hist_title.txt > history/hist_title.txt
-#curl --silent --show-error --fail https://raw.githubusercontent.com/Rbloggers/facebook-publish/history/hist_tags.txt > history/hist_tags.txt
-#curl --silent --show-error --fail https://raw.githubusercontent.com/Rbloggers/facebook-publish/history/hist_link.txt > history/hist_link.txt
+echo "Getting History ..."
+curl --silent --show-error --fail https://raw.githubusercontent.com/Rbloggers/facebook-publish/history/hist_title.txt > history/hist_title.txt
+curl --silent --show-error --fail https://raw.githubusercontent.com/Rbloggers/facebook-publish/history/hist_tags.txt > history/hist_tags.txt
+curl --silent --show-error --fail https://raw.githubusercontent.com/Rbloggers/facebook-publish/history/hist_link.txt > history/hist_link.txt
 
 ### INTERRUPT: Empty history
 #> history/hist_title.txt
