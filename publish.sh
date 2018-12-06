@@ -34,7 +34,7 @@ do
     
     
     ## Check publish history on FB
-    if grep -Fxq "${link}" hist_link.txt; then
+    if grep -Fxq "${link}" history/hist_link.txt; then
         echo "${link} already published on FB."
         exit 1000
     else
