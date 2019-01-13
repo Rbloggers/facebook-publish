@@ -23,6 +23,6 @@ curl --silent --show-error --fail https://raw.githubusercontent.com/Rbloggers/fa
 curl --silent --show-error --fail https://raw.githubusercontent.com/Rbloggers/facebook-publish/history/hist_link.txt > history/hist_link.txt
 
 ### INTERRUPT: Empty history
-> history/hist_title.txt
-> history/hist_tags.txt
-> history/hist_link.txt
+#> history/hist_title.txt
+#> history/hist_tags.txt
+#> history/hist_link.txt
