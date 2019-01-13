@@ -1,0 +1,43 @@
+R等差數列(前後二個元素相減)與條件式計算
+2018人工智慧與資料科學應用研討會
+主題式地圖(Thematic map) - 政府開放資料為例
+函數原始碼 source code
+R讀取中文檔案產生亂碼等錯誤問題
+by + scale 資料物件轉換為資料框並與原始資料合併
+R與2017年金雞報喜 ^_^
+網路抓取 R CRAN 套件清單, 使用 ggplot2 套件繪圖, 建立第2個y軸座標.
+R與2018年狗年行大運 ^_^
+R軟體教學影片
+機率分配查表與 pnorm, qnorm應用
+蒙地卡羅法估計圓周率 (Monte Carlo Estimation of pi)
+R程式除錯與效能提升設計
+RStudio 錯誤訊息 Error: invalid multibyte character in parser at line 1
+R軟體與Shiny Web應用程式設計
+經營管理講座 - Big Data Application
+中文網頁表格擷取,亂碼處理
+2017 R TAIWAN 研討會
+圖例中顯示點線混合符號 legend
+r ? <- $ () [] {} [[ @  :: 常用特殊運算子 (operators)
+3D繪圖
+R資料匯入與匯出
+r quantmod 套件下載財金資料與錯誤解決方法-Errors Downloading Stock Price Data from Yahoo Finance
+建立 GIF 動畫檔案 animation 套件
+使用 pdftools 套件擷取台灣各縣市明日白天雨量
+為什麼我們看不懂別人寫的 R 程式？
+R + sparkR : Windows 7 安裝筆記
+關於「R軟體：應用統計方法」時間數列程式錯誤
+R軟體中文數字轉換
+R 軟體 sqldf 套件：INSERT, UPDATE, CREATE TABLE AS SELECT
+R Windows 版 + ITRI 文字語音服務: Text to Speech
+R軟體 svSocket Server + PHP Socket Client
+R: tryCatch 簡單範例
+R 迴圈 List, Vector 記憶體預分配的考量
+在R中使用結巴分詞
+正規表示式Regular Expression in R
+開始用blogdown寫blog啦
+在Ubuntu伺服器架設Jupyter Notebook
+R的arguments出現三個點是...?
+用blogdown建立個人網頁
+我的 R 學習歷程
+Text Mining 前處理：中文、R 與 quanteda
+jieba 自訂詞庫斷詞
