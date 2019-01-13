@@ -3,6 +3,7 @@ sudo: required
 dist: trusty
 
 script:
+  - time sleep 60
   - bash get_info.sh
   - bash check_url.sh
 
