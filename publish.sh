@@ -21,7 +21,7 @@ fi
 
 
 ## Post on Facebook
-min=1080  #60  # First post scheduled in $min minutes
+min=480  #60  # First post scheduled in $min minutes
 postperday=3
 num=0
 cross_day=2
