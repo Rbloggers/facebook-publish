@@ -41,3 +41,4 @@ https://rbloggers.github.io/2017/08/21/yjtseng-website.html
 https://rbloggers.github.io/2018/01/30/Yongfu_Liao-RlearningPath.html
 https://rbloggers.github.io/2018/07/27/Yongfu_Liao-quanteda-tutorial.html
 https://rbloggers.github.io/2018/07/30/Yongfu_Liao-jieba-dict.html
+https://rbloggers.github.io/2019/01/22/collabin-write-in-rmd.html
