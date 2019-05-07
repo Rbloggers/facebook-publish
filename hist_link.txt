@@ -44,3 +44,4 @@ https://rbloggers.github.io/2018/07/30/Yongfu_Liao-jieba-dict.html
 https://rbloggers.github.io/2019/01/22/collabin-write-in-rmd.html
 https://rbloggers.github.io/2019/03/06/Yongfu_Liao-ntuthesis.html
 https://rbloggers.github.io/2019/03/27/Alan_Lee-tableau-r.html
+https://rbloggers.github.io/2019/05/06/Alan_Lee-highway.html
