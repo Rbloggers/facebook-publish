@@ -46,3 +46,4 @@ ntuthesis：用 Markdown 撰寫博碩士論文
 Tableau 與 R 整合
 R軟體開放資料應用-高速公路篇
 Python與物聯網應用
+如何運用大數據協助農業生產
