@@ -48,3 +48,4 @@
 
 #bigdata #data_science #workshop
 #data_process #dataset #python #tutorials
+#python #SQL #VirtualBox #Windows_10

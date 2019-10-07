@@ -48,3 +48,4 @@ https://rbloggers.github.io/2019/05/06/Alan_Lee-highway.html
 https://rbloggers.github.io/2019/06/18/Alan_Lee-python.html
 https://rbloggers.github.io/2019/06/26/Alan_Lee-intelligentfarm.html
 https://rbloggers.github.io/2019/09/14/Alan_Lee-dataset.html
+https://rbloggers.github.io/2019/10/06/Alan_Lee-vm-windows10.html
