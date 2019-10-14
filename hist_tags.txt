@@ -49,3 +49,4 @@
 #bigdata #data_science #workshop
 #data_process #dataset #python #tutorials
 #python #SQL #VirtualBox #Windows_10
+#chord #graphics #Rtools #visualization #web
