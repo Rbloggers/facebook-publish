@@ -50,3 +50,4 @@ Python與物聯網應用
 資料集與使用範例
 VirtualBox 安裝 Windows 10 虛擬機器
 資料視覺化於相關性分析-弦圖 (Chord Diagram)
+R語言大數據營運煉金術課程-開課日期12/6,12/13

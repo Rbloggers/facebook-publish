@@ -50,3 +50,4 @@
 #data_process #dataset #python #tutorials
 #python #SQL #VirtualBox #Windows_10
 #chord #graphics #Rtools #visualization #web
+#data_science #training #tutorials
