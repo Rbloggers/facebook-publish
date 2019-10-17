@@ -51,3 +51,4 @@
 #python #SQL #VirtualBox #Windows_10
 #chord #graphics #Rtools #visualization #web
 #data_science #training #tutorials
+#training
